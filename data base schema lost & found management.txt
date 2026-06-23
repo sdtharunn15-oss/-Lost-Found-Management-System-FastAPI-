@@ -1,0 +1,54 @@
++------------------+
+|      USERS       |
++------------------+
+| id (PK)          |
+| username         |
+| email            |
+| password         |
+| role             |
++------------------+
+         |
+         |
+         ▼
+
++------------------+
+|   LOST_ITEMS     |
++------------------+
+| id (PK)          |
+| user_id (FK)     |
+| item_name        |
+| category         |
+| description      |
+| lost_date        |
+| lost_location    |
+| image_url        |
+| status           |
++------------------+
+
+
++------------------+
+|   FOUND_ITEMS    |
++------------------+
+| id (PK)          |
+| user_id (FK)     |
+| item_name        |
+| category         |
+| description      |
+| found_date       |
+| found_location   |
+| image_url        |
+| status           |
++------------------+
+         |
+         |
+         ▼
+
++------------------+
+|      CLAIMS      |
++------------------+
+| id (PK)          |
+| found_item_id FK |
+| user_id FK       |
+| status           |
+| created_at       |
++------------------+
